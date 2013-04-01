@@ -1,0 +1,89 @@
+
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+  color: #777777;
+  margin: 40px 0px 70px;
+  text-align: center;
+}
+
+.hidden {
+	display: none !important;
+}
+
+.btn-large-comp {
+  height: 30px;
+  padding: 3px;
+  margin-top: 8px !important;
+}
+
+.btn-large {
+  margin-top: 15px;
+}
+
+.gwt-TextBox {
+	height: 15px;
+}
+
+.gwt-DialogBox {
+  	width: 400px;
+}
+
+#closeButton {
+  margin: 15px 6px 6px;
+}
+
+#loginform {
+	background-image: url('/images/loginform.png');
+	background-repeat: no-repeat;
+	
+	width: 328px;
+	height: 218px;
+	
+	margin-top: 100px;
+}
+
+#registerfld {
+	position: relative;
+	top: 10px;
+	right: -120px;
+	
+	margin-right: 17px;
+	margin-top: 10px;
+}
+
+#usernameinp input {
+	position: relative;
+	float: left;
+
+	margin-top: 30px;
+	margin-left: 15px;
+	width: 280px;
+}
+
+#passwordinp input {
+	position: relative;
+	float: left;
+
+	margin-left: 15px;
+	width: 280px;
+}
+
+#password2inp input {
+	position: relative;
+	float: left;
+	margin-bottom: 0px;
+	
+	margin-left: 15px;
+	width: 280px;
+}
+
+h1 {
+	font-size: 50px;
+	margin-bottom: 0px;
+}
+
+h2 {
+	font-size: 20px;
+}
+

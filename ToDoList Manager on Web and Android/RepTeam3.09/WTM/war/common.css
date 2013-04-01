@@ -1,0 +1,49 @@
+
+body {
+	background-image: url('/images/bg.png');
+	background-attachment: fixed;
+	text-align: center;
+}
+
+h1 {
+	font-family: 'Montserrat Alternates', sans-serif;
+}
+
+h2 {
+	font-family: 'Finger Paint', cursive;
+}
+
+.gwt-DialogBox {
+	background-color: white;
+	border: 1px solid gray;
+	padding-bottom: 5px;
+}
+
+.gwt-DialogBox table {
+	width: 100%;
+}
+
+table td {
+	text-align: center;
+}
+
+.gwt-DialogBox .dialogTopCenterInner {
+	border-bottom: 1px solid silver;
+	display: table;
+	width: 100%;
+	height: 40px;
+	margin-bottom: 10px;
+}
+
+.dialogTopCenterInner .Caption {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.dialogVPanel {
+  margin: 5px;
+}
+
+.serverResponseLabelError {
+  color: red;
+}

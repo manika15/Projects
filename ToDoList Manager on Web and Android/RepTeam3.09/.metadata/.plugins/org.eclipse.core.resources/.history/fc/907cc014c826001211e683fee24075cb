@@ -1,0 +1,62 @@
+package de.vogella.junit.first;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
+import static org.junit.Assert.assertTrue;
+import java.lang.reflect.Field;
+import org.junit.Before;
+import org.junit.Ignore;
+import org.junit.Test;
+
+public class VendingMachineTest {
+	VendingMachine vm = new VendingMachine();
+	Field fcurrValue, ftotValue, fenabled;
+	int currValue, totValue;
+	boolean enabled;
+		
+	@Before
+	public void initialize() throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException
+	{
+		fcurrValue = VendingMachine.class.getDeclaredField("currValue");
+		ftotValue = VendingMachine.class.getDeclaredField("totValue");
+		fenabled = VendingMachine.class.getDeclaredField("enabled");
+		
+		fcurrValue.setAccessible(true);
+		ftotValue.setAccessible(true);
+		fenabled.setAccessible(true);
+		
+		//currValue = fcurrValue.getInt(vm);
+		//totValue = ftotValue.getInt(vm);
+		//enabled = fenabled.getBoolean(vm);
+	}
+	@Ignore
+	public void testVendingMachine() {
+		fail("Not yet implemented"); // TODO
+	}
+
+	@Test
+	public void testInsert() throws IllegalArgumentException, IllegalAccessException {
+			//fail("Not yet implemented");
+			Coin c = new Coin("quarter");
+			//assertEquals("Illegal value", 1, c.getValue());
+			vm.insert(c);
+			currValue = fcurrValue.getInt(vm);
+			assertEquals("CurrValue", 25, currValue);
+            if (fcurrValue.getInt(vm) >= 75)
+            	{assertTrue("input value more than 75",fenabled.getBoolean(vm));
+            	}
+            else System.out.println("input value less than 75" +""+ fenabled.getBoolean(vm));
+}
+	
+
+	@Test
+	public void testReturnCoins() {
+		
+	}
+
+	@Test
+	public void testVend() {
+		fail("Not yet implemented"); // TODO
+	}
+
+}

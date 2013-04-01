@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/green_background"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="10dp"
+        android:text="@string/signup_heading"
+        android:textStyle="bold" >
+    </TextView>
+
+    <RelativeLayout
+   android:layout_width="wrap_content" 
+   android:layout_height="wrap_content"  >
+    <ScrollView
+        android:id="@+id/ScrollViewLogin"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="55dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/white"
+        android:fadeScrollbars="false"
+        android:isScrollContainer="true"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:text="@string/add_item_name"
+                android:textColor="@android:color/black" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/EditText_add_task"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:inputType="textPersonName"
+                android:maxLines="1" >
+            </EditText>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:text="@string/add_item_priority"
+                android:textColor="@android:color/black" >
+            </TextView>
+
+            <LinearLayout 
+                 android:layout_width="fill_parent"
+			    android:layout_height="fill_parent"
+			    android:background="@color/green_background"
+			    android:orientation="horizontal" >
+			    
+                <Spinner
+                android:id="@+id/spinner_add_Priority"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:entries="@array/priority" />
+            	
+                <ImageView 
+                     android:id="@+id/image_add_Priority"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/priority"
+                android:src="@drawable/red"
+                android:paddingTop="5dp">
+                    
+                </ImageView>
+            
+            </LinearLayout>
+            
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:text="@string/add_item_date"
+                android:textColor="@android:color/black" >
+            </TextView>
+
+         <!--     <DatePicker
+                android:id="@+id/datePicker1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" /> -->
+                
+                 <LinearLayout
+                android:orientation="horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent">
+                
+                <ImageButton
+                 android:gravity="center"
+                 android:id="@+id/ImageButton_add_DueDate"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:src="@drawable/calendar"
+                 android:background="@null"
+                 android:padding="3dip" >
+                </ImageButton>
+                
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center"
+                    android:text="start date"
+                    android:textColor="@android:color/black"
+                    android:id="@+id/TextView_add_StartDate">
+                </TextView>
+             </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:text="@string/add_item_note"
+                android:textColor="@android:color/black" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/edittext_add_desc"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:inputType="textMultiLine">
+            </EditText>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+ 		android:layout_alignParentBottom="true" >
+        
+         <Button 
+                   android:id="@+id/btn_add_save"
+                  android:text="@string/btn_save"
+                  android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:paddingLeft="50dp" 
+                    android:paddingRight="50dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/btn_bg">
+              </Button>
+
+              <Button 
+                   android:id="@+id/btn_add_cancel"
+                  android:text="@string/btn_cancel"
+                  android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                    android:textColor="@android:color/white" 
+                    android:layout_alignParentRight="true"
+                    android:paddingLeft="50dp" 
+                    android:paddingRight="50dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/btn_bg">
+              </Button>
+	
+    </RelativeLayout> 
+</RelativeLayout>
+   
+
+</LinearLayout>

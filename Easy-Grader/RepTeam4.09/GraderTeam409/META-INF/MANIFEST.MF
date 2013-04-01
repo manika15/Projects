@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: GraderTeam409
+Bundle-SymbolicName: GraderTeam409
+Bundle-Version: 1.0.0.qualifier
+Export-Package: edu.gatech.arktos,
+ edu.gatech.arktos.testcases

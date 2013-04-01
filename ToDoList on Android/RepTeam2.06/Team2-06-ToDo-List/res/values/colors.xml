@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="green_background">#E3F0D1</color>
+<color name="waveindex_background">#B2FF6B</color>
+<color name="clickable_links">#003A8E</color>
+<color name="buttonbg">#186596</color>
+<color name="blue_row">#E8EDFF</color>
+<color name="red_star">#FF3030</color>
+<color name="disabled_btn">#F2F3F4</color>
+<color name="clickable_links_new">#32933F</color>
+<color name="btn_new_user">#CB3C2C</color>
+
+</resources>

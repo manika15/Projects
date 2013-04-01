@@ -1,0 +1,5 @@
+package de.vogella.junit.first;
+
+public class VendingMachine {
+
+}

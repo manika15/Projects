@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView41"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/item_name" />
+
+    <TextView
+        android:id="@+id/textView42"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/editText42"
+        android:text="@string/item_note" />
+
+    <Button
+        android:id="@+id/sync"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:onClick="onSaveClick"
+        android:text="@string/sync" />
+
+    <EditText
+        android:id="@+id/editText41"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:ems="10"
+        android:hint="@string/item_name_default"
+        android:inputType="text" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/editText42"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/editText41"
+        android:ems="10"
+        android:hint="@string/item_note_default"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/cancel_button"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/sync"
+        android:layout_alignParentLeft="true"
+        android:onClick="onCancelClick"
+        android:text="@string/cancel_button" />
+
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/cancel_button"
+        android:layout_alignBottom="@+id/cancel_button"
+        android:layout_toRightOf="@+id/cancel_button"
+        android:onClick="onSaveClick"
+        android:text="@string/save_button" />
+
+    <TextView
+        android:id="@+id/textView43"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/seekBar41"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/seekBar41"
+        android:text="@string/priority" />
+
+    <SeekBar
+        android:id="@+id/seekBar41"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/cancel_button"
+        android:layout_alignLeft="@+id/editText42"
+        android:layout_marginBottom="30dp"
+        android:max="2"
+        android:minWidth="200dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox41"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/editText42"
+        android:text="@string/set_due_time" />
+
+    <DatePicker
+        android:id="@+id/datePicker41"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/seekBar41"
+        android:layout_alignParentRight="true" />
+
+</RelativeLayout>

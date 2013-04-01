@@ -1,0 +1,29 @@
+package de.vogella.junit.first;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class VendingMachineTest {
+
+	@Test
+	public void testVendingMachine() {
+		fail("Not yet implemented"); // TODO
+	}
+
+	@Test
+	public void testInsert() {
+		fail("Not yet implemented"); // TODO
+	}
+
+	@Test
+	public void testReturnCoins() {
+		fail("Not yet implemented"); // TODO
+	}
+
+	@Test
+	public void testVend() {
+		fail("Not yet implemented"); // TODO
+	}
+
+}

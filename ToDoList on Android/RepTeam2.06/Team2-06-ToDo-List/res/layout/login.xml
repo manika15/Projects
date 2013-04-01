@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:background="@color/green_background" 
+    android:layout_height="fill_parent"
+    android:id="@+id/LinearViewLogin">
+     
+    <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Todo_heading"
+            android:textStyle="bold"
+            android:paddingTop="10dp"
+            android:textSize="20dp"
+            android:layout_gravity="center_horizontal"/>
+     <ScrollView
+        android:id="@+id/ScrollViewLogin"
+        android:isScrollContainer="true"
+        android:scrollbars="vertical"
+        android:scrollbarAlwaysDrawVerticalTrack="true" 
+        android:layout_gravity="center" 
+        android:layout_width="fill_parent"
+         android:layout_height="wrap_content" 
+         android:layout_marginRight="10dp"
+         android:layout_marginLeft="10dp"
+         android:layout_marginTop="1dp"
+         android:layout_marginBottom="20dp"
+         android:fadeScrollbars="false"
+         android:background="@drawable/btn_bg"
+        >
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding = "8dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login_page_txt_usrname"
+                android:textColor="@android:color/white"></TextView>
+            <EditText
+                android:id="@+id/EditText_username"
+                android:maxLines="1"
+                android:hint="@string/login_page_txt_usrname_hint"
+                android:inputType="text"                
+                android:gravity="left"  
+                android:layout_width="fill_parent" 
+                 android:layout_height="wrap_content" >
+              </EditText>
+                  
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login_page_txt_pass"
+                android:textColor="@android:color/white"></TextView>
+            <EditText
+                android:id="@+id/EditText_Password"
+                android:maxLines="1"
+                android:hint="@string/login_page_txt_pass_hint"
+                android:inputType="textPassword"
+                android:gravity="left" 
+                android:layout_width="fill_parent"
+                 android:layout_height="wrap_content">
+             </EditText>
+            
+       <!--     <RelativeLayout
+              android:layout_width="fill_parent" 
+              android:layout_height="wrap_content">
+              
+             
+              
+              <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Remember me? "                  
+                    android:gravity="center"
+                    android:textColor="@android:color/white"
+                     android:layout_gravity="center"
+                     android:paddingTop="10dp"
+                     android:layout_toLeftOf="@+id/ToggleButton_IsAvailable_Loginpage">
+                 </TextView>
+                   <ToggleButton 
+                       android:id="@+id/ToggleButton_IsAvailable_Loginpage"
+                       android:layout_height="wrap_content"  
+                       android:checked="true"
+                       android:textColor="@android:color/black"
+                       android:layout_width="wrap_content" 
+                       android:layout_alignParentRight="true"
+                    android:paddingRight="7dp"
+                    android:layout_marginTop="7dp">
+                  </ToggleButton>
+                
+            
+             </RelativeLayout>-->  
+              
+              <Button 
+                   android:id="@+id/btn_login"
+                  android:text="@string/btn_login"
+                  android:layout_width="fill_parent"
+                   android:layout_height="wrap_content"
+                    android:textColor="@android:color/black" 
+                    android:layout_marginTop="50dp">
+              </Button>
+             
+             
+             
+             
+            
+            <LinearLayout
+                android:id="@+id/LinearLayout_login_forgotpasswordArea"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+               android:gravity="center"
+               android:paddingTop="10dp">
+                <TextView 
+                  android:text="@string/txt_new_user"
+                 android:background="@null"
+                  android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textSize="15dp"
+                    android:textColor="@android:color/white"
+                    android:layout_marginRight="3dp">
+              </TextView>
+                
+      <!--        <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" | "                  
+                    android:gravity="center_vertical"
+                    android:textColor="@android:color/white"
+                     android:layout_gravity="center_vertical"
+                     >
+                 </TextView> -->
+                 
+            <Button
+                    android:id="@+id/btn_Signup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btn_new_user" 
+                     android:textSize="15dp"
+                     android:background="@color/btn_new_user"
+                    android:textColor="@android:color/white"
+                    android:gravity="left"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:layout_marginLeft="3dp">
+             </Button>
+              
+              
+             </LinearLayout> 
+                    
+            
+            
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

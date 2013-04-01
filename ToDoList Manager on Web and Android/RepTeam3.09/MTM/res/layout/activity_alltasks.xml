@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ListView
+        android:id="@+id/all_taskListView"
+        android:layout_width="fill_parent"
+        android:layout_height="360dp"
+        android:clickable="true"
+        android:divider="#b5b5b5"
+        android:dividerHeight="1dp"
+        android:layout_above="@+id/addTask"
+        android:listSelector="@drawable/list_selector"
+        android:longClickable="true" />
+
+    <Button
+        android:id="@+id/addTask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/sync"
+        android:layout_alignParentLeft="true"
+        android:onClick="onAddTaskClick"
+        android:text="@string/add_item" />
+
+    <Button
+        android:id="@+id/sync"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:onClick="onSyncClick"
+        android:text="@string/sync" />
+
+</RelativeLayout>

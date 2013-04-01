@@ -1,0 +1,70 @@
+package de.vogella.junit.first;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
+import static org.junit.Assert.assertTrue;
+import java.lang.reflect.Field;
+import org.junit.Before;
+import org.junit.Ignore;
+import org.junit.Test;
+
+public class VendingMachineTest {
+	VendingMachine vm = new VendingMachine();
+	Field fcurrValue, ftotValue, fenabled;
+	int currValue, totValue;
+	boolean enabled;
+		
+	@Before
+	public void initialize() throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException
+	{
+		fcurrValue = VendingMachine.class.getDeclaredField("currValue");
+		ftotValue = VendingMachine.class.getDeclaredField("totValue");
+		fenabled = VendingMachine.class.getDeclaredField("enabled");
+		
+		fcurrValue.setAccessible(true);
+		ftotValue.setAccessible(true);
+		fenabled.setAccessible(true);
+		
+		//currValue = fcurrValue.getInt(vm);
+		//totValue = ftotValue.getInt(vm);
+		//enabled = fenabled.getBoolean(vm);
+	}
+	@Ignore
+	public void testVendingMachine() {
+		fail("Not yet implemented"); // TODO
+	}
+
+	@Test
+	public void testInsert() throws IllegalArgumentException, IllegalAccessException {
+			//fail("Not yet implemented");
+			Coin c = new Coin("penny");
+			//assertEquals("Illegal value", 1, c.getValue());
+			vm.insert(c);
+			currValue = fcurrValue.getInt(vm);
+			enabled = fenabled.getBoolean(vm);
+			assertEquals("CurrValue",1, currValue);
+			assertEquals("Credit",false, enabled);
+            
+            Coin c1 = new Coin("silverdollar");
+            vm.insert(c1);
+            enabled = fenabled.getBoolean(vm);
+            assertEquals("Credit",true, enabled);
+}
+	
+
+	@Test
+	public void testReturnCoins() throws IllegalArgumentException, IllegalAccessException{
+	Coin c2 = new Coin("silverdollar");
+	vm.insert(c2);
+	vm.returnCoins();
+	currValue = fcurrValue.getInt(vm);
+	enabled = fenabled.getBoolean(vm);
+	assertEquals("Value", 25, currValue);
+	}
+
+	@Test
+	public void testVend() {
+		fail("Not yet implemented"); // TODO
+	}
+
+}
